@@ -1,2 +1,2 @@
 # Sprint-7
-Proyecto de tripleten
+Aplicación que grafica un histograma sobre la venta de vehiculos
