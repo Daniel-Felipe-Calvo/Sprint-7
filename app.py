@@ -8,11 +8,11 @@ hist_button = st.button('Construir histograma') # crear un botón
         
 if hist_button: # al hacer clic en el botón
     st.write('Gráfico de un histograma para el conjunto de datos de anuncios de venta de coches')
-    fig = px.histogram(car_data, x="odometer")
+    fig = px.histogram(car_data, x="odometer", xlabel = "Km Recorridos", ylabel = "Cantidad")
     st.plotly_chart(fig, use_container_width=True)
     
 scatter_checkbox = st.checkbox('Mostrar gráfico de dispersión')
 if scatter_checkbox:  # al marcar la casilla
     st.write('Gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
-    fig_scatter = px.scatter(car_data, x="odometer", y="price", title="Precio vs. Odómetro")
+    fig_scatter = px.scatter(car_data, x="odometer", y="price", title="Precio vs. Odómetro", xlabel = "Km Recorridos", ylabel = "Precio")
     st.plotly_chart(fig_scatter, use_container_width=True)
